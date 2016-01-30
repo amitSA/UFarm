@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+	
+    <!-- Bootstrap theme -->
+    <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
+	
+	
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+	
+	<link href="carousel.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/footer-distributed.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+ <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="main.html">U-Farm</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="main.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="sign_in.html">Login</a></li>
+				<li><a href="signup.html">Sign Up</a></li>
+				<li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rentals <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+					<li><a href="#">All Categories</a></li>
+                    <li><a href="#">Construction Equipment</a></li>
+                    <li><a href="#">General Purpose</li>
+                    <li><a href="#">Harvesting</a></li>
+					<li><a href="#">Hay and Forage Equipment</a></li>
+					<li><a href="#">Landscaping, Nursery & Arborist</a></li>
+					<li><a href="#">Livestock Equipment</a></li>
+					<li><a href="#">Planting</a></li>
+					<li><a href="#">Sprayers</a></li>
+					<li><a href="#">Spreaders and Floaters</a></li>
+					<li><a href="#">Tender Trucks</a></li>
+					<li><a href="#">Tillage</a></li>
+					<li><a href="#">Tractors</a></li>
+					<li><a href="#">Trailers</a></li>
+					<li><a href="#">Other</a></li>
+				   </ul>
+                </li>
+				<li  class="active"><a href="equip_list.html">LIST YOUR EQUIPMENT</a></li>
+			  </ul>
+			  <form class="navbar-form navbar-right" role="search">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+<div class="container">
+
+<div class="page-header">
+<div class="text__">   <h1>Contact Form</h1> </div>
+</div>
+
+<!-- Contact Form - START -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <form class="form-horizontal" method="post">
+                    <fieldset>
+                        <legend class="text-center header">List your Equipment</legend>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="fname" name="name" type="text" placeholder="First Name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-cog fa-spin"></i></span>
+                            <div class="col-md-8">
+							<select name="mydropdown">
+							<option value="construction">Construction Equipment</option>
+							<option value="general purpose">General Purpose</option>
+							<option value="harvesting">Harvesting</option>
+							<option value="hay and forage">Hay and Forage Equipment</option>
+							<option value="Landscaping">Landscaping, Nursery & Arborist</option>
+							<option value="Livestock">Livestock Equipment</a></li>
+							<option value="Planting">Planting</a></li>
+							<option value="Sprayers">Sprayers</a></li>
+							<option value="Spreaders">Spreaders and Floaters</a></li>
+							<option value="Tender">Tender Trucks</a></li>
+							<option value="Tillage">Tillage</a></li>
+							<option value="Tractors">Tractors</a></li>
+							<option value="Trailers">Trailers</a></li>
+							<option value="Other">Other</a></li>							
+                   
+							</div>
+                        </div>
+						
+						<div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="equip" name="equipment" type="text" placeholder="Name of Equipment" class="form-control">
+                            </div>
+                        </div>
+						
+						<div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
+                            </div>
+                        </div>
+
+						<div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="pass" name="Password" type="text" placeholder="Password" class="form-control">
+                            </div>
+						</div>		
+                        
+						<div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <textarea class="form-control" id="message" name="message" placeholder="Description of your item, city you are located in and whether you can deliver or use shipping" rows="7"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .header {
+        color: #36A0FF;
+        font-size: 27px;
+        padding: 10px;
+    }
+
+    .bigicon {
+        font-size: 35px;
+        color: #36A0FF;
+    }
+</style>
+
+<script>
+var as = document.form1.ddlViewBy.value;
+var e = document.getElementById("equip");
+var strUser = e.options[e.selectedIndex].value;
+var value = document.getElementById("equip").value;
+</script>
+<!-- Contact Form - END -->
+
+<footer class="footer-distributed">
+		<p class="pull-right"><a href="#">Back to top</a></p>
+			<div class="footer-right">
+
+				<a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
+				<a href="www.twitter.com"><i class="fa fa-twitter"></i></a>
+				<a href="www.linkedin.com"><i class="fa fa-linkedin"></i></a>
+				<a href="www.github.com"><i class="fa fa-github"></i></a>
+			</div>
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a href="main.html">Home</a>
+					·
+					<a href="about.html">About</a>
+					·
+					<a href="contact.html">Contact</a>
+				</p>
+
+				<p>U-Farm &copy; 2015</p>
+			</div>
+
+</footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
