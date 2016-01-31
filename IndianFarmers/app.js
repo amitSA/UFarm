@@ -41,7 +41,7 @@ app.use(function (req, res, next) {
 });
 
 app.get('/', function (req, res) {
-   res.send("HelOO India");   
+   res.redirect("/main.html");   
 });
 app.get('/users', user.list);
 

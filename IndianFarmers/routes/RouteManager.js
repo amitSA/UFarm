@@ -26,7 +26,8 @@ var endConnection = function (conn) {
 
 
 app.get("/query", function (req, res, next) {
-   console.log("\n req ip address: " + req.ip);
+   //console.log("\n req ip address: " + req.ip);
+   console.log(req.query.Rental);
    var connection = mysql.createConnection({
       host: "169.233.193.211",
       user: "test",
@@ -39,7 +40,11 @@ app.get("/query", function (req, res, next) {
          return;
       }
       console.log("Connection Succesfully Established");
-      connection.query("SELECT * FROM " + tableName, function (err, rows) {
+      var sqlQuery = "SELECT * FROM " + tableName;
+      if (req.query.Rental === "*") {
+         sqlQuery += " WHERE Rental='" + req.query.Rental + "'";
+      }
+      connection.query(sqlQuery, function (err, rows) {
          if (err) {
             console.log("Error in queing from table, error: " + err);
          } else {
