@@ -41,14 +41,15 @@ app.get("/query", function (req, res, next) {
       }
       console.log("Connection Succesfully Established");
       var sqlQuery = "SELECT * FROM " + tableName;
-      if (req.query.Rental === "*") {
+      if (req.query.Rental != "All_Categories") {
          sqlQuery += " WHERE Rental='" + req.query.Rental + "'";
       }
+      console.log("query: " + sqlQuery);
       connection.query(sqlQuery, function (err, rows) {
          if (err) {
             console.log("Error in queing from table, error: " + err);
          } else {
-            console.log("Recieved Data from table: \n" + JSON.stringify(rows,null,2));
+            //console.log("Recieved Data from table: \n" + JSON.stringify(rows,null,2));
          }
          //end connection
          endConnection(connection);
