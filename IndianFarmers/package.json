@@ -1,0 +1,16 @@
+{
+  "name": "IndianFarmers",
+  "version": "0.0.0",
+  "description": "IndianFarmers",
+  "main": "app.js",
+  "author": {
+    "name": "Amit",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "mysql": "^2.10.2",
+    "stylus": "*"
+  }
+}
