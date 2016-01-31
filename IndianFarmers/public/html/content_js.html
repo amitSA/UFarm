@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+	
+    <!-- Bootstrap theme -->
+    <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+	
+	<link href="carousel.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="main.html">U-Farm</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="main.html">Home</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="sign_in.html">Login</a></li>
+				<li><a href="signup.html">Sign Up</a></li>
+				<li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rentals<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+					<li><a href="content.html">All Categories</a></li>
+					<li><a href="content1.html">Planting</a></li>
+					<li><a href="content2.html">Tractors</a></li>
+				   </ul>
+                </li>
+			  </ul>
+			  <form class="navbar-form navbar-right" role="search">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+<p>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+</p>
+
+
+<div class="container" >
+    <div class="row">
+        <div id="rentals" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+            <div class="panel panel-default">
+                <div class="row padall">
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <span></span>
+                        <img id="rentals_img" src="/Content/images/shared/properties1/condo1.jpg" />
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                        <div class="clearfix">
+                            <div class="pull-left">
+                                <span id="rentals_cost" class="fa fa-dollar icon"> 499,000</span>
+                            </div>
+                            <div id="rentals_name" class="pull-right">
+                                900 SqFt | 1 Bedroom | 1 Bathroom
+                            </div>
+                        </div>
+                        <div>
+                            <h4><span id="rentals_desc" class="fa fa-map-marker icon"></span> 1021 N Garfield St</h4>
+                            Build 2007. Close to Merto. 
+							<span class="fa fa-lock icon pull-right"> Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>	
+		
+<script>
+$.get( "169.233.221.126:3000/search", function( data ) {
+    
+    var arr = JSON.parse(data);
+	alert(JSON.stringify(data));
+    var i;
+	document.getElementById("rentals").style.visibility = "hidden";
+    for(var i = 0; i < arr.length; i++) {
+		document.getElementById("rentals").getElementById("rentals_img").innerHTML=arr[i].Image;
+		document.getElementById("rentals").getElementById("rentals_cost").innerHTML=arr[i].Cost;
+		document.getElementById("rentals").getElementById("rentals_name").innerHTML=arr[i].Renter;
+		document.getElementById("rentals").getElementById("rentals_desc").innerHTML=arr[i].Rental +" located at "+arr[i].City;
+		document.write(document.getElementById("rentals").innerHTML);
+		document.write("<br>");
+    }
+});
+</script>
+
+</body>
+</html>
