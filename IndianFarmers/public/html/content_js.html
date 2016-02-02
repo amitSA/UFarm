@@ -142,7 +142,7 @@ $.get( "http://169.233.221.126:3000/query?"+sql, function( data ) {
    for(var i = arr.length-1; i >= 0; i--) {
        var newEle = ele.clone(); 
        newEle.find("#rentals_img").attr("src",arr[i].Image);
-       newEle.find("#rentals_cost").html(arr[i].Cost);
+       newEle.find("#rentals_cost").html("$"+arr[i].Cost+"/day");
        newEle.find("#rentals_name").html(arr[i].Renter);
        newEle.find("#rentals_desc").html(arr[i].Rental +" located at "+arr[i].City);
        newEle.css("display","block");
